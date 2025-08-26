@@ -1,15 +1,22 @@
 ﻿#include <iostream>
 #include "Inventory.hpp"
 
-using namespace std;
-
 int main()
 {
     Inventory<Item> inv(2);
+
+    cout << endl << "[인벤토리 현황 : ]" << endl;
+    cout << "용량: " << inv.GetCapacity() << ", 개수: " << inv.GetSize() << endl;
+    inv.PrintAllItems();
+
+    cout << endl << "[아이템 추가 : 포션(30G)]" << endl;
     inv.AddItem(Item{ "포션", 30 });
+    cout << endl << "[아이템 추가 : 해독(20G)]" << endl;
     inv.AddItem(Item{ "해독제", 20 });
+    cout << endl << "[아이템 추가 : 롱소드(120G)]" << endl;
     inv.AddItem(Item{ "롱소드", 120 }); // capacity 자동 2배 확장
 
+    cout << endl << "[ 인벤토리 현황 : ]" << endl;
     cout << "용량: " << inv.GetCapacity() << ", 개수: " << inv.GetSize() << endl;
     inv.PrintAllItems();
 

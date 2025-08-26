@@ -9,7 +9,7 @@ using namespace std;
 class Item
 {
 private:
-	std::string name_;
+	string name_;
 	int price_;
 
 public:
